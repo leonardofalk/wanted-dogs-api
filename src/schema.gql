@@ -1,0 +1,15 @@
+type DogType {
+  id: ID
+  name: String
+  reward: Float
+  image: String
+}
+
+type Query {
+  dog(id: ID): DogType
+  dogs: [DogType]
+}
+
+type Mutation {
+  createDog(name: String!, reward: Float!, image: String!): DogType
+}
